@@ -1,0 +1,5 @@
+﻿{
+ "StatusCode":"400",
+ "ContentType":"application/xml",
+ 'Body':'<?xml version="1.0" encoding="utf-8" ?><Response><Error><Message>Not found!</Message></Error></Response>'
+}

@@ -1,0 +1,8 @@
+﻿{
+	"StatusCode": "200",
+	"Headers" : {
+		"Content-Type" : "application/json",
+        "Connection" : "close"
+	},
+    "Body": "{\"Success\": { \"Message\": \"Works!\" }}"
+}

@@ -1,0 +1,10 @@
+﻿{
+	"StatusCode": "200",
+	"Headers" : 
+	{
+		"Content-Type" : "text/plain",
+		"Content-Encoding" : "gzip",
+        "Connection" : "close"
+	},
+	"Body" : "This is some gzipped content"
+}

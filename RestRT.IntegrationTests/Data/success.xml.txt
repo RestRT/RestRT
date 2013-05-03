@@ -1,0 +1,5 @@
+﻿{
+    "StatusCode": "200",
+    "ContentType": "application/xml",
+    "Body": "<?xmlversion=\"1.0\" encoding=\"utf-8\"?><Response><Success><Message>Works!</Message></Success></Response>"
+}

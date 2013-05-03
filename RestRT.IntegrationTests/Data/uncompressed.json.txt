@@ -1,0 +1,9 @@
+﻿{
+	"StatusCode": "200",
+	"Headers" : 
+	{
+		"Content-Type" : "text/plain",
+        "Connection" : "close"
+	},
+	"Body" : "This is some sample content"
+}
