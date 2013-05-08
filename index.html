@@ -37,43 +37,37 @@
         <h3>Examples</h3>
         
         <div class="highlight">
-          <pre>
-            <code class="csharp">var client = new RestClient("http://example.com");
+          <pre><code class="csharp">var client = new RestClient(<span class="s">"http://example.com"</span>);
             
-var request = new RestRT.RestRequest("resource/{id}");
+var request = new RestRT.RestRequest(<span class="s">"resource/{id}"</span>);
               
-request.AddParameter("name", "value");  // adds to POST or URL querystring based on Method
-request.AddUrlSegment("id", 123); // replaces matching token in request.Resource
+request.AddParameter(<span class="s">"name"</span>, <span class="s">"value"</span>);  <span class="c1">// adds to POST or URL querystring based on Method</span>
+request.AddUrlSegment(<span class="s">"id"</span>, 123); <span class="c1">// replaces matching token in request.Resource</span>
 
-// execute the request
+<span class="c1">// execute the request</span>
 var response = await client.ExecuteAsync(request);
-var content = response.Content; // raw content as string
+var content = response.Content; <span class="c1">// raw content as string</span>
 
-//deserialize JSON response
+<span class="c1">//deserialize JSON response</span>
 var deserializer = new RestSharp.Deserializers.JsonDeserializer();
-var person = deserializer.Deserialize(response, typeof(Person));
-            </code>              
-          </pre>              
+var person = deserializer.Deserialize(response, typeof(Person));</code></pre>              
         </div>
         
         <div class="highlight">
-          <pre>
-            <code class="javascript">var client = new RestRT.RestClient("http://example.com");
+          <pre><code class="javascript">var client = new RestRT.RestClient(<span class="s">"http://example.com"</span>);
             
-var request = new RestRT.RestRequest("resource/{id}");
+var request = new RestRT.RestRequest(<span class="s">"resource/{id}"</span>);
 
-request.addParameter("name", "value");  // adds to POST or URL querystring based on Method
-request.addUrlSegment("id", 123); // replaces matching token in request.Resource
+request.addParameter(<span class="s">"name"</span>, <span class="s">"value"</span>);  <span class="c1">// adds to POST or URL querystring based on Method</span>
+request.addUrlSegment(<span class="s">"id"</span>, 123); <span class="c1">// replaces matching token in request.Resource</span>
 
-// execute the request
+<span class="c1">// execute the request</span>
 client.executeAsync(request).done(function(response) {
-  var content = response.content;  // raw content as string
+  var content = response.content;  <span class="c1">// raw content as string</span>
 
-  //deserialize JSON response
+  <span class="c1">//deserialize JSON response</span>
   var person = JSON.parse(content);
-});
-
-            </code></pre></div>
+});</code></pre></div>
 
         <h3>Limitations</h3>
         <p>RestRT currently has several limitations when compared to RestSharp:</p>
