@@ -36,10 +36,11 @@
 
         <h3>Examples</h3>
         
+        <h4>C#</h4>
         <div class="highlight">
           <pre><code class="csharp">var client = new RestClient(<span class="s">"http://example.com"</span>);
             
-var request = new RestRT.RestRequest(<span class="s">"resource/{id}"</span>);
+var request = new RestRequest(<span class="s">"resource/{id}"</span>);
               
 request.AddParameter(<span class="s">"name"</span>, <span class="s">"value"</span>);  <span class="c1">// adds to POST or URL querystring based on Method</span>
 request.AddUrlSegment(<span class="s">"id"</span>, 123); <span class="c1">// replaces matching token in request.Resource</span>
@@ -49,10 +50,11 @@ var response = await client.ExecuteAsync(request);
 var content = response.Content; <span class="c1">// raw content as string</span>
 
 <span class="c1">//deserialize JSON response</span>
-var deserializer = new RestSharp.Deserializers.JsonDeserializer();
+var deserializer = new Deserializers.JsonDeserializer();
 var person = deserializer.Deserialize(response, typeof(Person));</code></pre>              
         </div>
         
+        <h4>JavaScript</h4>
         <div class="highlight">
           <pre><code class="javascript">var client = new RestRT.RestClient(<span class="s">"http://example.com"</span>);
             
