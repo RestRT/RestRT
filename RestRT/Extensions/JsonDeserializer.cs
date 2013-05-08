@@ -20,6 +20,13 @@ namespace RestRT.Deserializers
 		{
 		}
 
+        public object Deserialize(IRestResponse response, string type)
+        {
+            Type t = System.Type.GetType(type);
+
+            return Deserialize(response, t);
+        }
+
         public object Deserialize(IRestResponse response, Type type)
         {
             //Note: I think using GetRuntimeMethod here doesn't work because it only finds public members, so we have to be more brute force

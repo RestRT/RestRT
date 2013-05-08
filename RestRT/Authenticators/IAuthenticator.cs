@@ -15,7 +15,7 @@
 //   limitations under the License. 
 #endregion
 
-namespace RestRT
+namespace RestRT.Authenticators
 {
 	public interface IAuthenticator
 	{

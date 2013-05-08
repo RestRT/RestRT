@@ -19,7 +19,7 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace RestRT
+namespace RestRT.Authenticators
 {
 	public sealed class HttpBasicAuthenticator : IAuthenticator
 	{

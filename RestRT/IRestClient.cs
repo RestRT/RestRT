@@ -48,7 +48,7 @@ namespace RestRT
 		/// <summary>
 		/// 
 		/// </summary>
-		IAuthenticator Authenticator { get; set; }
+        Authenticators.IAuthenticator Authenticator { get; set; }
 		/// <summary>
 		/// 
 		/// </summary>

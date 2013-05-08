@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>RestRT</id>
+		<version>0.0.3-alpha</version>
+		<authors>Devin Rader</authors>
+		<owners>Devin Rader</owners>
+		<description>A simple REST and HTTP client for Windows Store Apps.</description>
+		<language>en-US</language>
+		<projectUrl>http://restrt.org</projectUrl>
+		<licenseUrl>https://github.com/restrt/RestRT/blob/master/LICENSE.txt</licenseUrl>
+		<tags>REST HTTP API JSON XML Windows8 WinRT WinJS</tags>
+	</metadata>
+</package>

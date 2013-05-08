@@ -54,7 +54,7 @@ namespace RestRT
 		{
 			Parameters = new List<Parameter>();
 			Files = new List<FileParameter>();
-			XmlSerializer = new XmlSerializer();
+			//XmlSerializer = new XmlSerializer();
 			JsonSerializer = new JsonSerializer();
 
             //TODO: Add BeforeSerialization delegate

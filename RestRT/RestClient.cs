@@ -54,12 +54,12 @@ namespace RestRT
 
 			// register default handlers
 			AddHandler("application/json", new JsonDeserializer());
-			AddHandler("application/xml", new XmlDeserializer());
+			//AddHandler("application/xml", new XmlDeserializer());
 			AddHandler("text/json", new JsonDeserializer());
 			AddHandler("text/x-json", new JsonDeserializer());
 			AddHandler("text/javascript", new JsonDeserializer());
-			AddHandler("text/xml", new XmlDeserializer());
-			AddHandler("*", new XmlDeserializer());
+			//AddHandler("text/xml", new XmlDeserializer());
+			//AddHandler("*", new XmlDeserializer());
 
 			FollowRedirects = true;
 		}
@@ -178,7 +178,7 @@ namespace RestRT
 		/// <summary>
 		/// Authenticator to use for requests made by this client instance
 		/// </summary>
-		public IAuthenticator Authenticator { get; set; }
+        public Authenticators.IAuthenticator Authenticator { get; set; }
 
 		private string _baseUrl;
 		/// <summary>
