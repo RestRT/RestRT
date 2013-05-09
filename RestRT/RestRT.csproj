@@ -133,7 +133,7 @@
     <Compile Include="Compression\ZLib\ZLibConstants.cs" />
     <Compile Include="Compression\ZLib\ZLibStream.cs" />
     <Compile Include="Deserializers\IDeserializer.cs" />
-    <Compile Include="Extensions\JsonDeserializer.cs" />
+    <Compile Include="Deserializers\JsonDeserializer.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Extensions\MiscExtensions.cs" />
     <Compile Include="Extensions\MonoHttp\HttpUtility.cs" />
