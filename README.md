@@ -14,7 +14,7 @@ Once you have installed the NuGet extension, you can choose to install the Twili
 
 Once you've added RestRT to your project its easy to use with eother C# or JavaScript.
 
-#### C\#
+#### CSharp
 
 ```
 var client = new RestClient("http://example.com");
