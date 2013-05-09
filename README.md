@@ -5,7 +5,7 @@ A simple REST and HTTP client for Windows RT.
 
 RestRT is a simple, easy to use REST and HTTP client for Windows Store Apps. Its public API is inspired by RestSharp, while internally it takes advantage of many new features of .NET 4.5 such as async/await and the new HttpClient API's.
 
-=== Installation
+### Installation
 
 The best and easiest way to add RestRT to your Windows Store App project is to use the NuGet package manager. NuGet is a Visual Studio extension that makes it easy to install and update third-party libraries and tools in Visual Studio.
 
@@ -15,11 +15,11 @@ http://docs.nuget.org/docs/start-here/installing-nuget
 
 Once you have installed the NuGet extension, you can choose to install the Twilio libraries using either the Package Manager dialog, or using the Package Manager console.
 
-=== Examples
+### Examples
 
 Once you've added RestRT to your project its easy to use with eother C# or JavaScript.
 
-==== C#
+#### C#
 
   var client = new RestClient("http://example.com");
             
@@ -36,7 +36,7 @@ Once you've added RestRT to your project its easy to use with eother C# or JavaS
   var deserializer = new Deserializers.JsonDeserializer();
   var person = deserializer.Deserialize(response, typeof(Person));
   
-==== JavaScript
+#### JavaScript
 
   var client = new RestRT.RestClient("http://example.com");
             
@@ -53,7 +53,7 @@ Once you've added RestRT to your project its easy to use with eother C# or JavaS
     var person = JSON.parse(content);
   });
 
-=== Limitations
+### Limitations
 
 RestRT currently has several limitations when compared to RestSharp:
 
