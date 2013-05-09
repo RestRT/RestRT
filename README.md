@@ -12,7 +12,7 @@ Once you have installed the NuGet extension, you can choose to install the Twili
 
 ### Examples
 
-Once you've added RestRT to your project its easy to use with eother C# or JavaScript.
+Once you've added RestRT to your project its easy to use with either C# or JavaScript.
 
 #### CSharp
 
