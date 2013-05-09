@@ -21,37 +21,41 @@ Once you've added RestRT to your project its easy to use with eother C# or JavaS
 
 #### C#
 
-  var client = new RestClient("http://example.com");
+```
+var client = new RestClient("http://example.com");
             
-  var request = new RestRequest("resource/{id}");
+var request = new RestRequest("resource/{id}");
               
-  request.AddParameter("name", "value");  // adds to POST or URL querystring based on Method
-  request.AddUrlSegment("id", 123); // replaces matching token in request.Resource
+request.AddParameter("name", "value");  // adds to POST or URL querystring based on Method
+request.AddUrlSegment("id", 123); // replaces matching token in request.Resource
 
-  // execute the request
-  var response = await client.ExecuteAsync(request);
-  var content = response.Content; // raw content as string
+// execute the request
+var response = await client.ExecuteAsync(request);
+var content = response.Content; // raw content as string
 
-  //deserialize JSON response
-  var deserializer = new Deserializers.JsonDeserializer();
-  var person = deserializer.Deserialize(response, typeof(Person));
-  
+//deserialize JSON response
+var deserializer = new Deserializers.JsonDeserializer();
+var person = deserializer.Deserialize(response, typeof(Person));
+```
+
 #### JavaScript
 
-  var client = new RestRT.RestClient("http://example.com");
+```
+var client = new RestRT.RestClient("http://example.com");
             
-  var request = new RestRT.RestRequest("resource/{id}");
+var request = new RestRT.RestRequest("resource/{id}");
 
-  request.addParameter("name", "value");  // adds to POST or URL querystring based on Method
-  request.addUrlSegment("id", 123); // replaces matching token in request.Resource
+request.addParameter("name", "value");  // adds to POST or URL querystring based on Method
+request.addUrlSegment("id", 123); // replaces matching token in request.Resource
 
-  // execute the request
-  client.executeAsync(request).done(function(response) {
-    var content = response.content;  // raw content as string
+// execute the request
+client.executeAsync(request).done(function(response) {
+  var content = response.content;  // raw content as string
 
-    //deserialize JSON response
-    var person = JSON.parse(content);
-  });
+  //deserialize JSON response
+  var person = JSON.parse(content);
+});
+```
 
 ### Limitations
 
