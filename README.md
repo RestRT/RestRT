@@ -1,8 +1,3 @@
-RestRT
-======
-
-A simple REST and HTTP client for Windows RT.
-
 RestRT is a simple, easy to use REST and HTTP client for Windows Store Apps. Its public API is inspired by RestSharp, while internally it takes advantage of many new features of .NET 4.5 such as async/await and the new HttpClient API's.
 
 ### Installation
@@ -19,7 +14,7 @@ Once you have installed the NuGet extension, you can choose to install the Twili
 
 Once you've added RestRT to your project its easy to use with eother C# or JavaScript.
 
-#### C#
+#### C\#
 
 ```
 var client = new RestClient("http://example.com");
