@@ -254,11 +254,11 @@ namespace RestRT.Deserializers
             else if (System.Reflection.IntrospectionExtensions.GetTypeInfo(type).IsGenericType)
 			{
 				var genericTypeDef = type.GetGenericTypeDefinition();
-				if (genericTypeDef == typeof(List<>))
+                if (genericTypeDef == typeof(List<>) || genericTypeDef == typeof(IList<>))
 				{
 					return BuildList(type, value);
 				}
-				else if (genericTypeDef == typeof(Dictionary<,>))
+                else if (genericTypeDef == typeof(Dictionary<,>) || genericTypeDef == typeof(IDictionary<,>))
 				{
 					//var keyType = type.GetGenericArguments()[0];
                     var keyType = type.GenericTypeArguments[0];
@@ -286,9 +286,32 @@ namespace RestRT.Deserializers
 
 		private object CreateAndMap(Type type, object element)
 		{
-			var instance = Activator.CreateInstance(type);
+            //TypeInfo info = type.GetTypeInfo();
+            //object instance = null;
 
-			Map(instance, (IDictionary<string, object>)element);
+            //// if an interface is passed in try to find a corresponding
+            //// concrete type since we cannot instantiate an interface
+            //if (info.IsInterface)
+            //{
+            //    if (info.IsGenericType)
+            //    {
+            //        Type[] genericArgs = info.GenericTypeArguments;
+
+            //        var typeName = type.Namespace + "." + type.Name.Substring(1);
+            //        Type baseType = Type.GetType(typeName);
+            //        Type newtype = baseType.MakeGenericType(genericArgs);
+
+            //        instance = Activator.CreateInstance(newtype);
+            //    }
+            //}
+            //else
+            //{
+            //    instance = Activator.CreateInstance(type);
+            //}
+
+            var instance = Activator.CreateInstance(type);
+
+            Map(instance, (IDictionary<string, object>)element);
 
 			return instance;
 		}

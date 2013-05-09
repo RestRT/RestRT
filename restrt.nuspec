@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>RestRT</id>
-		<version>0.0.3-alpha</version>
+		<version>0.0.5-alpha</version>
 		<authors>Devin Rader</authors>
 		<owners>Devin Rader</owners>
 		<description>A simple REST and HTTP client for Windows Store Apps.</description>
